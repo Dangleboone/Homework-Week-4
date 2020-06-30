@@ -1,0 +1,109 @@
+/* Help from study group with anthony and travis */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    font-family: fantasy;
+}
+
+:root {
+    --hue-nuetral: 270;
+    --hue-wrong: 0;
+    --hue-correct: 150
+}
+
+body {
+    --hue: var(--hue-nuetral) padding: 0;
+    margin: 0;
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    background-color: hsl(var(--hue), 100%, 20%);
+}
+
+body.correct {
+    --hue: var(--hue-correct)
+}
+
+body.wrong {
+    --hue: var(--hue-wrong)
+}
+
+.container {
+    width: 800px;
+    max-width: 75%;
+    background-color: white;
+    border-radius: 8px;
+    padding: 11px;
+    box-shadow: 0 0 200px 50px;
+}
+
+.btn-grid {
+    display: grid;
+    gap: 10px;
+    margin: 20px 0;
+}
+
+.btn {
+    --hue: var(--hue-nuetral);
+    border: 2px solid hsl(var(--hue), 100%, 50%);
+    background-color: yellow;
+    font-size: 20px;
+    ;
+}
+
+#GAMEOVER-btn {
+    background-color: orangered;
+
+}
+
+#GAMEOVER-btn:hover {
+    background-color: red;
+    font-size: 50px;
+}
+
+
+.btn:hover {
+    background-color:orangered;
+}
+
+.btn.correct {
+    --hue: var(--hue-correct) color: green;
+}
+
+.btn.wrong {
+    --hue: var(--hue-wrong) color: Red
+}
+
+.start-btn {
+    font-size: 30px;
+    background-color: yellow;
+}
+/* timer broken? */
+.base-timer {
+    position: bottom;
+    height: 15px;
+    width: 15px;
+}
+
+.base-timer__circle {
+    fill: none;
+    stroke: none;
+}
+
+.base-timer__path-elapsed {
+    stroke-width: 7px;
+    stroke: black;
+}
+
+.operation {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hide {
+    display: none;
+}
